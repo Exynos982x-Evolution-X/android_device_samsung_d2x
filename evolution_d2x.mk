@@ -32,18 +32,18 @@ TARGET_HAVE_SPEN := true
 $(call inherit-product, device/samsung/d2x/device.mk)
 
 ## Boot Animation
-TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 3040
 TARGET_SCREEN_WIDTH := 1440
+TARGET_BOOT_ANIMATION_RES := 1440
 
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+## Inherit some common EvolutionX stuff
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 ## Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := lineage_d2x
+PRODUCT_NAME := evolution_d2x
 PRODUCT_DEVICE := d2x
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-N976B
